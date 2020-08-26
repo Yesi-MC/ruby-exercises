@@ -72,18 +72,19 @@ class StringTest < Minitest::Test
     # skip
     words = "five sleepy kittens"
     # In place of the line below, call a method to achieve the expected output.
-    actual = words.gsub(/[e]/, '*')
+    actual = words.gsub("e", "*")
     expected = "fiv* sl**py kitt*ns"
 
     assert_equal expected, actual
   end
 
   def test_8
-    skip
+    #skip
     greeting = "Hello!!"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting.
+    actual = greeting.chop
     expected = "Hello!"
+    # works with Sub, gsub, and Chop
 
     assert_equal expected, actual
   end
@@ -99,10 +100,10 @@ class StringTest < Minitest::Test
   end
 
   def test_10
-    skip
+    # skip
     greeting = "Hello!!\n\n"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting._____
+    actual = greeting.chop
     expected = "Hello!!\n"
 
     assert_equal expected, actual
@@ -114,134 +115,139 @@ class StringTest < Minitest::Test
     # In place of the line below, call a method to achieve the expected output.
     actual = rhyme.delete "e"
     expected = "ny, mny, miny, mo"
+    # Can also use gsub("e", "")
 
     assert_equal expected, actual
   end
 
   def test_12
-    skip
+    # skip
     rhyme = "eeny, meeny, miny, moe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme._____
+    actual = rhyme.gsub(/[aeiou]/, "")
     expected = "ny, mny, mny, m"
 
     assert_equal expected, actual
   end
 
   def test_13
-    skip
+    # skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
+    actual = greeting.length
     expected = 12
 
     assert_equal expected, actual
   end
 
   def test_14
-    skip
+    # skip
     greeting = "Hello World!\n"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
+    actual = greeting.length
     expected = 13
 
     assert_equal expected, actual
   end
 
   def test_15
-    skip
+    # skip
     greeting = "Hello       World!"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
+    actual = greeting.length
     expected = 18
 
     assert_equal expected, actual
   end
 
   def test_16
-    skip
+    # skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of 'o' in the string
-    actual = greeting._____
+    actual = greeting.count("o")
     expected = 2
 
     assert_equal expected, actual
   end
 
   def test_17
-    skip
+    # skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of vowels in the string
-    actual = greeting._____
+    actual = greeting.count("eo")
     expected = 3
 
     assert_equal expected, actual
   end
 
   def test_18
-    skip
+    # skip
     greeting = "Hello World!"
     # In place of the line below, call a method to check if the string includes 'llo'
-    actual = greeting._____
+    actual = greeting.include?"llo"
     expected = true
 
     assert_equal expected, actual
   end
 
   def test_19
-    skip
+    # skip
     greeting = "Hello World!"
     # In place of the line below, call a method to check if the string includes 'lol'
-    actual = greeting._____
+    actual = greeting.include?"lol"
     expected = false
 
     assert_equal expected, actual
   end
 
   def test_20
-    skip
+    # skip
     greeting = "Hello World, my name is"
     name = "Harry Potter"
     # In place of the line below, use string manipulation to combine the
     #greeting and name variables to acheive the expected outcome
-    actual = _________
+    actual = greeting.concat(" ",name,)
     expected = "Hello World, my name is Harry Potter"
   end
 
   def test_21
-    skip
+    # skip
     # See if you can use another method than the last test to achieve the same goal:
     greeting = "Hello World, my name is"
     name = "Harry Potter"
-    actual = ________
+    actual = greeting << " "<< name
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
   end
 
   def test_22
-    skip
+    greeting = "Hello World, my name is"
+    name = "Harry Potter"
+    # skip
     # Again, using a different method:
-    actual = ________
+    actual = greeting + " " + name
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
   end
 
   def test_23
-    skip
+    # skip
+    greeting = "Hello World, my name is"
+    name = "Harry Potter"
     # Once more, using a different method:
-    actual = ________
+    actual = "#{greeting} #{name}"
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
   end
 
   def test_24
-    skip
+    # skip
     phrase = "  \n\t to the moon\n\n\t    "
     # In place of the line below, call a method to acheive the expected outcome
-    actual = ________
+    actual = phrase.strip
     expected = "to the moon"
 
     assert_equal expected, actual
