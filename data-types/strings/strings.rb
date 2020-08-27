@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+# require 'minitest/autorun'
 require 'minitest/pride'
 
 # There's a video walk-through of this exercise available here:
